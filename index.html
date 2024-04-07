@@ -10,7 +10,16 @@
   <body>
     <div id="container">
       <header>
+        <button class="btn btn-restart" onclick="restart()">restart</button>
         <h1>TODO List</h1>
+        <form>
+            <input type="text" id="todo-input" placeholder="add new task" />
+            <input type="number" id="user-id" placeholder="user id" />
+            <button type="submit" id="add-todo" class="btn btn-add" onclick="addTODO(event)">Add</button>
+        </form>
+        <form>
+            <input type="text" id="search-input" placeholder="search task..." />
+        </form>
       </head>
       <main>
         <div class="todo-row" id="todo-list-titles">
@@ -22,6 +31,7 @@
         </div>
         <div id="todo-list"></div>
       </main>
+      <div id="loading">loading...</div>
       <footer></footer>
     </div>
     <script src="./assets/main.js"></script>
